@@ -42,15 +42,15 @@ function generalized_class_group(S::Vector{AbsSimpleNumFieldOrderIdeal},T::Vecto
         error("S and T must be disjoint and at least one of them must be non-empty")
     end
     if !is_empty(S) 
-        O = maximal_order(base_ring(S[1]))
+        O = order(S[1])
     else 
-        O = maximal_order(base_ring(T[1]))
+        O = order(T[1])
     end
-    @assert all(maximal_order(base_ring(q)==O) for q in union(S,T))
+    @assert all(order(q)==O for q in union(S,T))
     m = prod(S; init = one(O))
     Cl, Cl_map = ray_class_group(m; n_quo = n_quo)
-    cl_S^T , _ = quo(Cl, sub(Cl, [Cl_map \ t for t in T])[1])
-    return cl_S^T
+    clST , _ = quo(Cl, sub(Cl, [Cl_map \ t for t in T])[1])
+    return clST
 end
 
 function create_linking_diagram_of_K(
