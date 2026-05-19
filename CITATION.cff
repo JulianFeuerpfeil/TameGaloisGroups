@@ -1,8 +1,18 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
 cff-version: 1.2.0
+title: ' TameGaloisGroups'
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
 authors:
-  - family-names: Feuerpfeil
-    given-names: Julian
-    orcid: https://orcid.org/0009-0000-0148-3348
-title: "Examples for Tame Galois Groups, Linking Numbers and Mildness"
-version: 1.0.0
-date-released: 2026-05-19
+  - given-names: Julian
+    family-names: Feuerpfeil
+    orcid: 'https://orcid.org/0009-0000-0148-3348'
+repository-code: 'https://github.com/JulianFeuerpfeil/TameGaloisGroups'
+abstract: >-
+  Here you can find the code used in the paper "Tame Galois
+  Groups, Linking Numbers and Mildness" to recreate the data
+  provided.
